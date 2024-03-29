@@ -8,7 +8,7 @@ This project introduces an innovative approach to generating visualizations from
 
 The high-level project structure is organized as follows:
 
-- **data:** [Data](https://github.com/aditi098/CSE_291_GenAI/tree/main/data)
+- **data:** [Data]
   
 - **generated_images:** Directory for storing generated images.
 
@@ -34,8 +34,6 @@ The high-level project structure is organized as follows:
     
   - **install.sh** Script to install all requirements for this project.
 
-## Architecture
-![arch4](https://github.com/Gunnika/StoryBoard-Generator/assets/34855465/11cb2f48-845b-427c-8f1b-a40711926638)
 
 
 The above diagram is an end-end pipeline for our final architecture. The raw story text is segmented into multiple segments using the TextTiling Segmentor, each of these segments are summarised into a one line summary by DistillBART-xsum. For the first summary, an image is generated using Text-to-image Stable Diffusion. The second image is conditioned on the first image to maintain some consistency in the theme. From thereon, the generated image is conditioned on the image with highest prompt similarity. Finally, two evaluations scores are calculated, one based on the text-image similarity using CLIP to evaluate if the images correspond to the prompts. The second score is used to evaluate the coherency in the storyboard, by doing a pairwise-cosine similarity evaluation on the image embeddings and averaging over them
@@ -44,7 +42,7 @@ To run the project
 
 1. Clone the github repo 
 ```
-   git clone https://github.com/aditi098/CSE_291_GenAI.git
+   git clone https://github.com/Pratham-taneja/Large-Text-to-storyboard.git
 ```
 2. Set up requirements
     ```
